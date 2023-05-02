@@ -1,0 +1,22 @@
+---
+name: Test maximizing action build disk space
+on: push
+
+jobs:
+  build:
+    name: Build artifact
+    runs-on: ubuntu-latest
+    steps:
+      - name: Initial space
+      - run: |
+          echo "Initial free space:"
+          df -h
+      - name: Maximize build space
+        uses: easimon/maximize-build-space@master
+        with:
+          remove-dotnet: "true"
+          remove-android: "true"
+      - name: Final space
+        run: |
+          echo "Final free space:"
+          df -h
