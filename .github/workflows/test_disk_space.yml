@@ -13,11 +13,11 @@ jobs:
           df -h
       - name: Maximize build space
         uses: easimon/maximize-build-space@master
-        with:
-          remove-android: "true"  # android sdks
-          remove-codeql: "true"   # code scanning
-          remove-dotnet: "true"   # .net sdks
-          remove-haskell: "true"  # haskell
+        # with:
+          # remove-android: "true"  # android sdks
+          # remove-codeql: "true"   # code scanning
+          # remove-dotnet: "true"   # .net sdks
+          # remove-haskell: "true"  # haskell
       - name: Final space
         run: |
           echo "Final free space:"
