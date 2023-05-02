@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Initial space
-      - run: |
+        run: |
           echo "Initial free space:"
           df -h
       - name: Maximize build space
