@@ -17,6 +17,7 @@ jobs:
           remove-android: "true"  # android sdks
           remove-codeql: "true"   # code scanning
           remove-dotnet: "true"   # .net sdks
+          remove-haskell: "true"  # haskell
       - name: Final space
         run: |
           echo "Final free space:"
